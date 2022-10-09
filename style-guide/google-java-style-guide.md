@@ -1,6 +1,6 @@
 # Google Java 编程风格指南
 
-> 转载并翻译自 [https://google.github.io/styleguide/javaguide.html](https://google.github.io/styleguide/javaguide.html)。个人英语水平有限，应以原文档为标准。<!--more-->
+> 转载并翻译自 [https://google.github.io/styleguide/javaguide.html](https://google.github.io/styleguide/javaguide.html)。个人英语水平有限，应以原文档为标准
 
 ## 目录
 
@@ -288,7 +288,7 @@ Java 代码的列限制为 100 个字符。这儿的「字符」意味着任意�
        (String label, Long value, Object obj) -> {
           ...
        };
-
+   
    Predicate<String> predicate = str ->
        longExpressionInvolving(str);
    ```

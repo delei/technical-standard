@@ -5,7 +5,8 @@
 
 ## 索引
 
-[代码风格指南](./style-guide)
+- [代码风格指南](./style-guide)
+- [开源协议](./open-source/)
 
 
 
