@@ -7,6 +7,7 @@
 
 - [代码风格指南](./style-guide)
 - [开源协议](./open-source/)
+- [开源协议](./ version-control/)
 
 
 
