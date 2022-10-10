@@ -312,3 +312,5 @@ AoneFlow 的发布分支设计十分巧妙，可谓整个体系的精髓。GitFl
 [What is Trunk-Based Development](https://paulhammant.com/2013/04/05/what-is-trunk-based-development/)
 
 [在阿里，我们如何管理代码分支？](https://developer.aliyun.com/article/573549)
+
+[企业代码版本管理之争: TrunkBased vs GitFlow vs AoneFlow vs OneFlow vs ExeFlow](https://www.cnblogs.com/pluto4596/p/11464819.html)
