@@ -1,4 +1,4 @@
-# Airbnb CSS / Sass Styleguide
+# Airbnb CSS / Sass Style Guide
 
 *A mostly reasonable approach to CSS and Sass*
 
@@ -248,7 +248,7 @@ Use `0` instead of `none` to specify that a style has no border.
       background: green;
       font-weight: bold;
       @include transition(background 0.5s ease);
-
+    
       .icon {
         margin-right: 10px;
       }
