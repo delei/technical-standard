@@ -1,4 +1,4 @@
-# technical-standard
+# Technical Standard
 各类技术规范标准、风格指南等汇总
 
 
