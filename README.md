@@ -15,7 +15,7 @@
 ###  [开源](./open-source/)
 
 - [开源许可证（Open Source License）](./open-source/open-source-license.md)
-- [开源许可证的兼容性](./open-source/开源许可证兼容性指南.md)
+- [开源许可证的兼容性(2020)-云计算开源产业联盟](./open-source/开源许可证兼容性指南.md)
 
 ###  [版本控制](./version-control/)
 
