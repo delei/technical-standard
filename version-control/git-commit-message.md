@@ -135,9 +135,86 @@ type用于说明 commit 的类别，代表某次提交的类型。
 
 用来简要描述本次改动，概述就好了，因为后面还会在Body里给出具体信息。一般填写要求：
 
-- 以动词开头，使用第一人称现在时，比如change，而不是changed或changes
+- 以动词开头，使用第一人称现在时。比如change，而不是changed或changes
 - 第一个字母小写
 - 结尾不加句号（.）
+
+
+
+### Body
+
+Body 部分是对本次 commit 的详细描述。
+
+- 和 **subject** 一样, 使用第一人称现在时
+- 第2行是空行
+
+- 内容信息可以分成多行，用换行来分割提交信息
+- 应该包括改变的动机，并将其与之前的行为进行对比。
+
+例如修改的背景（为什么做这次修改），说明修改逻辑。
+
+
+
+### Footer
+
+Footer 部分可用于以下两种情况：
+
+#### 不兼容变动(Breaking changes)
+
+指的是本次提交修改了不兼容之前版本的变动修改。如果当前代码与上一个版本不兼容，则 Footer 部分以`BREAKING CHANGE`开头，后面是对变动的描述、以及变动理由和迁移方法
+
+```
+BREAKING CHANGE: isolate scope bindings definition has changed.
+
+    To migrate the code follow the example below:
+
+    Before:
+
+    scope: {
+      myAttr: 'attribute',
+    }
+
+    After:
+
+    scope: {
+      myAttr: '@',
+    }
+
+    The removed `inject` wasn't generaly useful for directives so there should be no code using it.
+```
+
+
+
+#### 引用提交的问题（affect issues）
+
+如果当前 commit 针对某些 issue，那么可以在 Footer 部分关闭这些相关的 issue。以关键字`Closes`开头，比如
+
+```
+Closes #234
+
+# 如果修改了多个bug，以逗号隔开
+Closes #123, #245, #992
+```
+
+
+
+### Revert
+
+还有一种特殊情况，如果当前 commit 用于撤销以前的 commit，则必须以revert:开头，后面跟着被撤销 Commit 的 Header。
+
+```
+revert: feat(pencil): add 'xxxxx' option` `This reverts commit docsxxx.
+```
+
+Body部分的格式是固定的，必须写成`This reverts commit <hash>`.，
+
+其中的hash是被撤销 commit 的 SHA 标识符。
+
+- 如果当前 commit 与被撤销的 commit，在同一个发布（release）里面，
+
+那么它们都不会出现在 Change log 里面。
+
+- 如果两者在不同的发布，那么当前 commit，会出现在 Change log 的Reverts小标题下面。
 
 
 
@@ -147,24 +224,49 @@ type用于说明 commit 的类别，代表某次提交的类型。
 
 [官网](https://github.com/commitizen/cz-cli)
 
-```shell
-# 需要已安装 NodeJS
-# 全局安装
-npm install -g commitizen
-```
+先使用 `npm` 命令进行安装，可进行全局安装或者根据项目安装。
 
 `Commitizen`支持多种不同的提交规范，可以安装和配置不同的适配器实现。以`Conventional Commit`规范为例
 
+#### 全局安装
+
 ```shell
+# 全局安装 commitizen 和 cz-conventional-changelog
+npm install -g commitizen
 # 安装 Adapter
-$ npm install -g cz-conventional-changelog
-# 配置
-$ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+npm install -g  cz-conventional-changelog
+
+# 在系统用户目录下创建.czrc 文件，并输入一下内容：
+echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+```
+
+#### 项目安装
+
+```shell
+# 安装 commitizen 和 cz-conventional-changelog
+npm install commitizen cz-conventional-changelog -D
+```
+
+在项目目录中的 package.json 文件内配置以下内容：
+
+```json
+{
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
 ```
 
 安装完成后，查看是否在`package.json`中已加入`cz-conventional-changelog`信息。
 
-安装完成后，使用`git-cz`替代`git commit`完成提交操作。
+#### 使用
+
+安装完成后，提交的时候使用`git cz`（全局）或者`npm run commit`（项目）来代替`git commit`，
 
 ```shell
 git cz
@@ -181,3 +283,5 @@ git cz
 [2020你应该知道的git commit规范](https://blog.51cto.com/u_15080031/2589463)
 
 [美团 GIT Commit Log规范](https://cloud.tencent.com/developer/article/1762300)
+
+[何为「Git Commit」最佳姿势](https://lkangd.com/post/develop-good-git-commit-habits/)
