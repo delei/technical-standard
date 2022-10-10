@@ -33,6 +33,7 @@
 
 - [GBT 8567-计算机软件文档编制规范](./delivery-document/GBT8567-2006/)
 - [PDMan导出 Word模板](./delivery-document/pdman_word_template.docx)
+- [API接口说明 MD 模板](./delivery-document/api-doc-template.md)
 
 ### [行业分类](./industrial-classification/)
 
