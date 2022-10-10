@@ -5,7 +5,10 @@
 
 ## 索引
 
+> 已按照如下分类整理到相应文件夹中，具体文件可点击分类查看
+
 ###  [代码风格指南](./style-guide/)
+
   - [Airbnb CSS / Sass Style Guide](./style-guide/airbnb-css-style-guide.md)
   - [Airbnb JavaScript编码规范指南(ES6)中文版](./style-guide/airbnb-javascript-style-guide.md)
   - [Google Java 编程风格指南](./style-guide/google-java-style-guide.md)
@@ -26,7 +29,18 @@
 - [semver 语义化版本](./version-control/semver-cn-v2.0.0.md)
 - [常见的 Git 工作流](./version-control/git-workflow.md)
 
+### [交付文档](./delivery-document/)
 
+- [GBT 8567-计算机软件文档编制规范](./delivery-document/GBT8567-2006/)
+- [PDMan导出 Word模板](./delivery-document/pdman_word_template.docx)
+
+### [行业分类](./industrial-classification/)
+
+- 国民经济行业分类(GBT4754-2017)
+- 申银万国行业分类标准 2021 版
+- 中证行业分类架构
+- 证监会行业分类
+- GICS（全球行业分类标准）
 
 ## License
 
