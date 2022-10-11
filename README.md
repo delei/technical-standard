@@ -9,13 +9,15 @@
 
 ###  [代码风格指南](./style-guide/)
 
+  - [Google Style Guides](https://github.com/google/styleguide)
+  - [Google 开源项目风格指南——中文版](https://github.com/zh-google-styleguide/zh-google-styleguide)
   - [Airbnb CSS / Sass Style Guide](./style-guide/airbnb-css-style-guide.md)
   - [Airbnb JavaScript编码规范指南(ES6)中文版](./style-guide/airbnb-javascript-style-guide.md)
   - [Google Java 编程风格指南](./style-guide/google-java-style-guide.md)
   - [Vue 2.x 代码风格指南](./style-guide/vue-v2-style-guide.md)
   - [Vue.js 组件编码规范](./style-guide/vuejs-component-style-guide.md)
 
-###  [开源](./open-source/)
+###  [开源许可](./open-source/)
 
 - [开源许可证（Open Source License）](./open-source/open-source-license.md)
 - [开源许可证的兼容性(2020)-云计算开源产业联盟](./open-source/开源许可证兼容性指南.md)
