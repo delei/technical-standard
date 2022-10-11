@@ -17,7 +17,7 @@
   - [Vue 2.x 代码风格指南](./style-guide/vue-v2-style-guide.md)
   - [Vue.js 组件编码规范](./style-guide/vuejs-component-style-guide.md)
   - [中文技术文档写作风格指南](https://github.com/yikeke/zh-style-guide)
-  - [腾讯代码安全指南](https://github.com/Tencent/secguide)
+  - [腾讯代码安全指南](./style-guide/tencent-secguide)
 
 ###  [开源许可](./open-source/)
 
